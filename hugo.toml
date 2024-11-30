@@ -16,7 +16,7 @@ palette = 'tender'
 
 [params.about]  # sidebar
 title = "hnolan.com"
-description = "welcome to my site where i ramble about nothing"
+description = "feel free to get in contact via any of the methods below"
 
 [[params.socialLinks]]
 icon = "fa-brands fa-github"
@@ -40,11 +40,11 @@ url = "mailto:hayden@hnolan.com"
 
 
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 10
+#  [[menu.main]]
+#    identifier = "about"
+#    name = "About"
+#    url = "/about"
+#    weight = 10
   [[menu.main]]
     identifier = "post"
     name = "Posts"
