@@ -1,10 +1,10 @@
-baseURL = 'https://blog.hnolan.com'
+baseURL = 'https://chunned.ca'
 languageCode = 'en'
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 
 theme = 'risotto'
-title = 'hnolan.com'
+title = 'chunned.ca'
 author = "Hayden Nolan"
 
 [params]
@@ -15,7 +15,7 @@ author = "Hayden Nolan"
 palette = 'tender'
 
 [params.about]  # sidebar
-title = "hnolan.com"
+title = "chunned.ca"
 description = "feel free to get in contact via any of the methods below"
 
 [[params.socialLinks]]
