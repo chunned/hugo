@@ -1,6 +1,6 @@
 +++
 date = '2024-12-19T20:56:05-05:00'
-draft = true
+draft = false
 title = 'Security Homelab 1: Overview and VM Creation'
 description = "To kick off this series, I'll talk about our lab topology and the process of creating the VMs."
 series = ["Security Homelab"]
