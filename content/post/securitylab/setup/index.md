@@ -17,8 +17,6 @@ So we now have all our VMs created, but we aren't done the setup process yet. In
 - Set up Active Directory and turn our Windows Server VMs into domain controllers
 - Join our Windows 11 PCs to the Active Directory domain
 - Set up ELK on our Ubuntu VM
-- Set up Suricata on OPNsense
-- Make sure our network isolation is working properly
 
 ## Active Directory
 
@@ -118,4 +116,4 @@ Note: you might see this error. This is caused by an out of date browser - you c
 
 ---
 
-And that's it for now. I strongly recommend creating a snapshot of each VM at this point. This will be our base configuration point that we can always restore to in the future in case anything breaks. Stay tuned for the next post where we'll dig a bit deeper into Elastic and get all our endpoints monitored. 
+And that's it for now. I strongly recommend creating a snapshot of each VM at this point. This will be our base configuration point that we can always restore to in the future in case anything breaks. Stay tuned for the next post where we'll set up all of our network isolation as well as dig a bit deeper into Elastic and get all our endpoints monitored. 
