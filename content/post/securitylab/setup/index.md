@@ -1,6 +1,6 @@
 +++
 date = '2024-12-19T20:43:24-05:00'
-draft = true
+draft = false
 title = 'Security Homelab 2: Services Setup'
 description = "In part 2, we'll set up the various services we'll be using for our network."
 series = ["Security Homelab"]
@@ -116,6 +116,6 @@ Note: you might see this error. This is caused by an out of date browser - you c
 
 ![](SecLab_kibanaerror.png)
 
-Once you're logged into Kibana, 
+---
 
-- install Elastic agents and look at other integrations
+And that's it for now. I strongly recommend creating a snapshot of each VM at this point. This will be our base configuration point that we can always restore to in the future in case anything breaks. Stay tuned for the next post where we'll dig a bit deeper into Elastic and get all our endpoints monitored. 
