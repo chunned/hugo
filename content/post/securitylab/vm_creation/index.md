@@ -21,7 +21,7 @@ So, as a way for me to learn more about red team tools and tactics as well as re
 
 ## Topology
 
-![](/images/SecLab_topology.png)
+![](SecLab_topology.png)
 
 The OPNsense gateway at the top is our router to the Internet. On the left side in green, we have our real LAN with all our physical devices. On the right side, we have our lab network and its components. The lab network will be able to communicate with the OPNsense gateway to reach the Internet, but will not be able to communicate with the rest of our LAN network, and communication with the OPNsense gateway will be limited to traffic heading for the Internet. This is so that our malicious traffic is contained to the lab network and does not interfere with anything in our real LAN. 
 
@@ -81,7 +81,7 @@ I won't go in depth on the process of creating each VM, but I'll provide links a
 
 You can follow the [pfSense](https://docs.netgate.com/pfsense/en/latest/recipes/virtualize-proxmox-ve.html) guide for setting up this VM - pfSense and OPNsense are forks of the same project and their setup process is essentially identical. The only thing different for OPNsense is that you'll get better performance by using the q35 graphics card type. 
 
-![](/images/SecLab_q35.png)
+![](SecLab_q35.png)
 
 I am choosing to give my VM a 32gb drive, 4 CPU cores, and 4gb of RAM. 
 
@@ -105,7 +105,7 @@ Once the VM is booted, the setup process is very straightforward. I will be usin
 - Minimized installation
 - SSH server enabled
 - The following IPv4 configuration:
-![](/images/SecLab_ubuntuipv4.png)
+![](SecLab_ubuntuipv4.png)
 - Hostname will be `siem`
 
 ### Kali
@@ -122,15 +122,15 @@ Start the VM and go through the first couple steps of the installation wizard.
 
 Choose one of the OSes with a desktop environment:
 
-![](/images/SecLab_windesktop.png)
+![](SecLab_windesktop.png)
 
 When it asks you `Which type of installation do you want?`, choose `Custom: Install Microsoft Server Operating System only (advanced)`. Press the `Load driver` button:
 
-![](/images/SecLab_windriver.png)
+![](SecLab_windriver.png)
 
 Our VirtIO drivers should be found automatically. Press next. Once the drivers are installed, our VirtIO hard drive should be visible in the configuration wizard.
 
-![](/images/SecLab_windriver2.png)
+![](SecLab_windriver2.png)
 
 Click `New` and use the defaults, then press next. 
 
@@ -146,7 +146,7 @@ I'll be giving this VM a 64gb drive, 4 CPU cores, and 4gb RAM. Once again, ensur
 
 The installation wizard process is essentially the same, but the VirtIO driver loading is a little bit different. The relevant drivers won't be found automatically, so we will need to browse for them. The below screenshot shows the correct location to select.
 
-![](/images/SecLab_windriver3.png)
+![](SecLab_windriver3.png)
 
 Eventually you will come to the Windows setup wizard. On the network screen we'll install the VirtIO network driver. Click `Install driver`, navigate to where the VirtIO ISO was mounted, then to `NetKVM -> w11 -> amd64` and press select. Don't worry if it says 'no network drivers found' - it finds them. I have no idea why it says it doesn't.
 
@@ -160,12 +160,12 @@ Finally, reboot the VM, and repeat this process on PC2.
 
 First, go through the Windows installation process like we did on PC1 and PC2, but don't join the domain. Follow the relevant Flare-VM [pre-installation steps](https://github.com/mandiant/flare-vm?tab=readme-ov-file#pre-installation). Before continuing, we will change this VM's DNS server - it will have set its DNS server to DC1 via the DHCP lease, but this VM will not be able to reach DC1 eventually.
 
-![](/images/SecLab_dns2.png)
+![](SecLab_dns2.png)
 
 Next, follow the [installation instructions](https://github.com/mandiant/flare-vm?tab=readme-ov-file#flare-vm-installation) to set up all the tools. Do note that the install script will take quite a while to execute. 
 
 
 ## Continued
 
-To continue following along, check out [the next post in the series](./setup).
+To continue following along, check out [the next post in the series](../setup).
 

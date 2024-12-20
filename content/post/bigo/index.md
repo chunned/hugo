@@ -10,7 +10,7 @@ Big-O (along with big-Theta and big-Omega) are concepts in mathematics and compu
 
 TL;DR, \(f(x)=O(g(x))\) with witnesses \\(C, k\\) means that \\(f(x) \le Cg(x) \forall x \ge k\\)
 
-![Graph showing three functions, two of which represent the lower and higher bounds of the third.](/images/bigo.png)
+![Graph showing three functions, two of which represent the lower and higher bounds of the third.](bigo.png)
 
 
 Given a mathematical function, \\(f(x)\\), the big-O of this function gives us an upper bound for how \\(f(x)\\) scales as \\(x\\) gets bigger. In the graph above, when \\(x\\) is less than 1, \\(f(x)\\) is greater than \\(4x^2\\), but when \\(x\\) is greater than 1, \\(f(x)\\) will always be smaller than \\(4x^2\\).
