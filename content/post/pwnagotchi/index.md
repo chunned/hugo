@@ -224,3 +224,6 @@ With the handshake files in our possession, we need to make sure our tools are i
 Run the following command to extract the PMKID from the PCAP and save as a hashcat mode 22000 hash file: `~/hcxtools/hcxpcapngtool -o <name>.hc22000 <PCAP FILE>`
 
 Now, run hashcat: `hashcat -m 22000 -a3 -w3 <name>.hc22000 '?d?d?d?d?d?d?d?d'`. You may be wondering about the `?d?d?d` part - that is a [mask](https://hashcat.net/wiki/doku.php?id=mask_attack) which tells hashcat the format of the string to brute force. In our case, the mask is eight integers - this is because the default password on most consumer WAPs is a string of eight integers. If you want to instead try a wordlist, try [this one](https://wpa-sec.stanev.org/dict/cracked.txt.gz) (see [wpa-sec.stanev.org](https://wpa-sec.stanev.org) for details)
+
+After a few minutes (depending on how fast your machine is), the password should be cracked. 
+
