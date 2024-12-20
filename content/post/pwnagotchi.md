@@ -88,33 +88,33 @@ Now that our SD card is prepared, let's assemble the parts.
 
 ### Assembly
 
-![Base parts](4032-3024-max.jpg)
+![Base parts](/images/4032-3024-max.jpg)
 
 Take all the components out of their boxes and prepare to assemble them. Note that the PiSugar battery will have orange tape over the holes which may prevent the screws from screwing in correctly, so be sure to peel it off. 
 
 Start by screwing the Pi0 onto the battery. Make sure the pins on the Pi0 are lined up with the ones on the battery, like so:
 
-![Showing Pi0 pins lining up with PiSugar pins](image.png)
+![Showing Pi0 pins lining up with PiSugar pins](/images/image.png)
 
 Then simply screw in the screws that came with the battery. You will now have something that looks like this:
-![Showing the Pi0 and PiSugar screwed together](image-1.png)
+![Showing the Pi0 and PiSugar screwed together](/images/image-1.png)
 
 Now we just have to carefully slide the Waveshare down onto the header pins on the Pi0. Be careful not to bend the pins, but firm enough that the Waveshare is pushed down all the way. 
 
-![alt text](4032-3024-max-1.jpg)
+![alt text](/images/4032-3024-max-1.jpg)
 
-![alt text](4032-3024-max-1-1.jpg)
+![alt text](/images/4032-3024-max-1-1.jpg)
 
 ### First Boot
 Now you should be ready to insert the SD card into the Pi and power on the device. Be sure to give it plenty of time to boot - it needs to generate encryption keys and initialize the AI and various services, which can take a while on the relatively weak Pi0. If you interrupt it, you might have to re-flash the SD card and start over. 
 
 At some point roughly a minute or two after you first boot the device, the screen should turn on. We now need to plug our USB cable into the Pi0's data port, and the other end into our host device. 
 
-![Showing USB data port connection to laptop](4032-3024-max-2.jpg)
+![Showing USB data port connection to laptop](/images/4032-3024-max-2.jpg)
 
 You should notice a new Ethernet interface appear on your host machine - this is because the pwny uses Ethernet-over-USB to communicate with the device. 
 
-![alt text](1.webp)
+![alt text](/images/1.webp)
 
 We need to give it an IP and a default route to reach the pwny. If you use `nmcli` like me, you can do that with the following commands:
 
